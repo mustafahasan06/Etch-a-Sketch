@@ -21,7 +21,7 @@ rnbBtn.addEventListener('click', () => {
 });
 
 createBtn.addEventListener('click', (e) => {
-    size = prompt("Enter a grid number:",10);
+    size = prompt("Enter a grid number:",16);
     size = parseInt(userValue);
     if (size > 0 && size <= 100) {
         createGrids(size);
@@ -41,7 +41,13 @@ function createGrids(squaresPerSide) {
 
         divGrid.classList.add("grid-item");
         divGrid.addEventListener("mouseover", () =>{
-            divGrid.style.background="black";
+            if(currentMode==='black') divGrid.style.background="black";
+            else if(currentMode === 'rainbow'){
+                const r = Math.floor(Math.random() *256);
+                const g = Math.floor(Math.random() *256);
+                const b = Math.floor(Math.random() *256);
+                divGrid.style.background=`rgb(${r}, ${g} ,${b})`;
+            }
         });
         
         container.appendChild(divGrid);
