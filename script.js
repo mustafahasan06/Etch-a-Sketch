@@ -1,10 +1,10 @@
-let container = document.getElementById("container");
-let create = document.getElementById("create");
+const container = document.getElementById("container");
+const createBtn = document.getElementById("createBtn");
 const containerSize = '500';
 let userValue = 10;
 
     createGrids(16);
-create.addEventListener('click', (e) => {
+createBtn.addEventListener('click', (e) => {
     size = prompt("Enter a grid number:",10);
     size = parseInt(userValue);
     if (size > 0 && size <= 100) {

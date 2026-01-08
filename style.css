@@ -31,19 +31,30 @@ button:hover{
 button.active{
     background: #2157a9;
     color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 #container {
     display: flex;
     max-width: 500px;
     max-height: 500px;
     flex-wrap: wrap;
-    border: 5px solid grey;    
+    border: 10px solid #2157a9;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     
-}
-.colored {
-    color: black;
 }
 .grid-item {
     box-sizing: border-box; 
     border: 1px solid #eee;  
+}
+footer{
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #777;
+}
+footer span {
+  font-weight: bold;
+    color: #2157a9;  
+}
+a {
+    list-style: none;
 }
