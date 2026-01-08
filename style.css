@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f0f2f5;
+    background-color: #daddf097;
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -12,7 +12,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     color: #2157a9;
-    letter-spacing: 1rem;
+    letter-spacing: 6px;
     margin: 10px 0;
  
 }
@@ -23,7 +23,7 @@ body {
 button{
     padding: 10px 20px;
     font-weight: bold;
-    border: 2px solid #2157a9;
+    border: 2px solid #bdc9dc;
     background: white;
     cursor: pointer;
     transition: 0.3s;
@@ -48,7 +48,7 @@ button.active{
 }
 .grid-item {
     box-sizing: border-box; 
-    border: 1px solid #eee;  
+    border: 0.1px solid #8180eb;  
 }
 footer{
     margin-top: 20px;
@@ -57,7 +57,7 @@ footer{
 }
 footer span {
   font-weight: bold;
-    color: #2157a9;  
+    color: #6b8e53;  
 }
 a {
     list-style: none;
