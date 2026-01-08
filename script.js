@@ -1,34 +1,45 @@
 const container = document.getElementById("container");
-const createBtn = document.getElementById("createBtn");
+const createBtn = document.getElementById("create");
+const sizeInput = document.getElementById("grid-size");
 const blackBtn = document.getElementById("blackBtn");
-const rnbBtn = document.getElementById("rnbBtn");
+const rainbowBtn = document.getElementById("rainbowBtn");
 
 const containerSize = '500';
 let currentMode = 'black';
 
-    createGrids(16);
+createGrids(16);
 
-blackBtn.addEventListener('click', () => {
-    currentMode= 'black';
-    blackBtn.classList.add('active');
-    rnbBtn.classList.remove('active');
-});
-
-rnbBtn.addEventListener('click', () => {
-    currentMode= 'rainbow';
-    rnbBtn.classList.add('active');
-    blackBtn.classList.remove('active');
-});
-
-createBtn.addEventListener('click', (e) => {
-    size = prompt("Enter a grid number:",16);
-    size = parseInt(userValue);
+function updateGrid(){
+    let size = parseInt(sizeInput.value);
     if (size > 0 && size <= 100) {
         createGrids(size);
     } else {
         alert("Please enter a number between 1 and 100.");
+        sizeInput.value = 16;
     }
-})
+}
+
+createBtn.addEventListener('click', updateGrid);
+
+sizeInput.addEventListener('keypress', (e) =>{
+    if(e.key === 'Enter'){
+        updateGrid();
+    }
+});
+
+blackBtn.addEventListener('click', () => {
+    currentMode= 'black';
+    blackBtn.classList.add('active');
+    rainbowBtn.classList.remove('active');
+});
+
+rainbowBtn.addEventListener('click', () => {
+    currentMode = 'rainbow';
+    rainbowBtn.classList.add('active');
+    blackBtn.classList.remove('active');
+});
+
+
 function createGrids(squaresPerSide) {
     container.innerHTML='';
     const squareSize = containerSize / squaresPerSide;
