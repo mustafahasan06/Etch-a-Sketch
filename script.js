@@ -1,9 +1,25 @@
 const container = document.getElementById("container");
 const createBtn = document.getElementById("createBtn");
+const blackBtn = document.getElementById("blackBtn");
+const rnbBtn = document.getElementById("rnbBtn");
+
 const containerSize = '500';
-let userValue = 10;
+let currentMode = 'black';
 
     createGrids(16);
+
+blackBtn.addEventListener('click', () => {
+    currentMode= 'black';
+    blackBtn.classList.add('active');
+    rnbBtn.classList.remove('active');
+});
+
+rnbBtn.addEventListener('click', () => {
+    currentMode= 'rainbow';
+    rnbBtn.classList.add('active');
+    blackBtn.classList.remove('active');
+});
+
 createBtn.addEventListener('click', (e) => {
     size = prompt("Enter a grid number:",10);
     size = parseInt(userValue);
@@ -29,7 +45,6 @@ function createGrids(squaresPerSide) {
         });
         
         container.appendChild(divGrid);
-    }
-    
-       
+    }      
 }
+
