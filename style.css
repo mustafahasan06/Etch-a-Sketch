@@ -1,0 +1,23 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 30px;
+}
+#container {
+    display: flex;
+    max-width: 500px;
+    max-height: 500px;
+    flex-wrap: wrap;
+    border: 5px solid grey;    
+    
+}
+.colored {
+    color: black;
+}
+.grid-item {
+    box-sizing: border-box; 
+    border: 1px solid #eee;  
+}
