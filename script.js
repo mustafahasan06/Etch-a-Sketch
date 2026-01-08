@@ -1,6 +1,6 @@
 let container = document.getElementById("container");
 let create = document.getElementById("create");
-const containerSize = 500;
+const containerSize = '500';
 let userValue = 10;
 
     createGrids(16);
